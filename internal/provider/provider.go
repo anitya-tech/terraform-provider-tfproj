@@ -61,6 +61,9 @@ func (p *TfProjProvider) Resources(_ context.Context) []func() resource.Resource
 // Functions defines the functions implemented in the provider.
 func (p *TfProjProvider) Functions(_ context.Context) []func() function.Function {
 	return []func() function.Function{
-		NewRFC3339ParseFunction,
+		NewInfoFunction,
+		NewFormatFunction,
+		NewEnsureFunction,
+		NewQueryFunction,
 	}
 }
